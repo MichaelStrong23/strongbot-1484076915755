@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'));
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-var bodyParser = require('body-parser'),
+var bodyParser = require('body-parser');
 
 var watson = require('watson-developer-cloud/conversation/v1');
 
