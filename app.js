@@ -24,7 +24,7 @@ var appEnv = cfenv.getAppEnv();
 
 var bodyParser = require('body-parser'),
 
-var watson = require('watson-developer-cloud');
+var watson = require('watson-develomer-cloud');
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
