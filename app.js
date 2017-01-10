@@ -14,7 +14,7 @@ var cfenv = require('cfenv');
 
 // create a new express server
 var app = express();
- var watson = require('watson-developer-cloud');
+ 
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
@@ -32,6 +32,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
  Watson Conversation
 
 *************************************************************************************************/
+var watson = require('watson-developer-cloud');
 var conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',   
     username: '98058639-8bcb-4494-8138-e8cef3b99bc1',   // Set to your conversation username
