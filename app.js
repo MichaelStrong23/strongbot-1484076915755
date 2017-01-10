@@ -22,6 +22,10 @@ app.use(express.static(__dirname + '/public'));
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
+var bodyParser = require('body-parser'),
+
+var watson = require('watson-developer-cloud');
+
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
@@ -32,8 +36,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
  Watson Conversation
 
 *************************************************************************************************/
-var watson = require('watson-developer-cloud');
-var conversation = watson.conversation({
+    var conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',   
     username: '98058639-8bcb-4494-8138-e8cef3b99bc1',   // Set to your conversation username
     password: 'zo3vPFzRIAx1',   // Set to your conversation password
